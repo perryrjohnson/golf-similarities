@@ -37,7 +37,7 @@ def get_recommendations():
 if __name__ == '__main__':
 	reload(sys)
 	sys.setdefaultencoding('utf8')
-	pgatour_players = tc.SFrame('../Data/pgatour_stats.csv')
+	pgatour_players = tc.SFrame('Data/pgatour_stats.csv')
 	content_model = tc.load_model('player_skill_recommender')
 
 
