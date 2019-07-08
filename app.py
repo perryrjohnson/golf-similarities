@@ -6,13 +6,13 @@ import random
 import sys
 import json
 
+reload(sys)
+sys.setdefaultencoding('utf8')
+pgatour_players = tc.SFrame('Data/pgatour_stats.csv')
+content_model = tc.load_model('player_skill_recommender')
+
 
 app = Flask(__name__)
-
-
-def get_info(player):
-	data = pgatour_players[pgatour_players['NAME']==player]
-	return data
 
 
 @app.route('/')
@@ -35,10 +35,4 @@ def get_recommendations():
 		return render_template('error.html')
 
 if __name__ == '__main__':
-	reload(sys)
-	sys.setdefaultencoding('utf8')
-	pgatour_players = tc.SFrame('Data/pgatour_stats.csv')
-	content_model = tc.load_model('player_skill_recommender')
-
-
-	app.run(host='0.0.0.0', port=1111, debug=True)		
+	app.run()
