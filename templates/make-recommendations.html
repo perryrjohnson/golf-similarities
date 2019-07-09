@@ -72,9 +72,29 @@
                   <table class="table" id="player-table">
                       <tr>
                           <th id='hike-table'>Player</th>
+                          <th id='hike-table'>Avg. Driving Distance</th>
+                          <th id='hike-table'>3 Putt %</th>
+                          <th id='hike-table'>Driving Accuracy %</th>
+                          <th id='hike-table'>Strokes Gained Putting</th>
+                          <th id='hike-table'>Strokes Gained Off Tee</th>
+                          <th id='hike-table'>Strokes Gained Approach</th>
+                          <th id='hike-table'>Strokes Gained Around Green</th>
+                          <th id='hike-table'>GIR Fairway %</th>
+                          <th id='hike-table'>GIR Non_Fairway %</th>
+                          <th id='hike-table'>Sand Save %</th>                           
                         </tr>
                         <tr>
-                            <td>{{your_player}}</td>
+                            <td>{{your_player['NAME'][0]}}</td>
+                            <td>{{your_player['DRIVE_DISTANCE'][0]}}</td>
+                            <td>{{your_player['avoid_three_putt'][0]}}</td>
+                            <td>{{your_player['FWY_%'][0]}}</td>
+                            <td>{{your_player['SG_P'][0]}}</td>
+                            <td>{{your_player['SG_OTT'][0]}}</td>
+                            <td>{{your_player['SG_APR'][0]}}</td>
+                            <td>{{your_player['SG_ARG'][0]}}</td>
+                            <td>{{your_player['GIR_Fairway_%'][0]}}</td>
+                            <td>{{your_player['GIR_NotFairway_%'][0]}}</td>
+                            <td>{{your_player['Sand_Save_Pct'][0]}}</td>                            
                          </tr>
                    </table>
           <div class="container">
@@ -85,14 +105,32 @@
                       </div>
                  </div>
                       <table class="table" id="recommendations-table">
-                          <tr>
-                              <th id='recommendations-table'>Player</th>
-                              <th id='recommendations-table'>Similarity Score</th>
+                          <tr>                          
+                              <th id='recommendations-table'>Player (Similarity Score)</th>
+                              <th id='recommendations-table'>Avg. Driving Distance</th>
+                              <th id='recommendations-table'>3 Putt %</th>
+                              <th id='recommendations-table'>Driving Accuracy %</th>
+                              <th id='recommendations-table'>Strokes Gained Putting</th>
+                              <th id='recommendations-table'>Strokes Gained Off Tee</th>
+                              <th id='recommendations-table'>Strokes Gained Approach</th>
+                              <th id='recommendations-table'>Strokes Gained Around Green</th>
+                              <th id='recommendations-table'>GIR Fairway %</th>
+                              <th id='recommendations-table'>GIR Non_Fairway %</th>
+                              <th id='recommendations-table'>Sand Save %</th>                                                     
                             </tr>
                                {% for rec in recs %}
-                            <tr>
-                                <td>{{rec['NAME']}}</td>
-                                <td>{{rec['score']}}</td>
+                            <tr>                             
+                                <td>{{rec['NAME'][0]}}, {{(rec['score'][0])}}</td>
+                                <td>{{rec['DRIVE_DISTANCE'][0]}}</td>
+                                <td>{{rec['avoid_three_putt'][0]}}</td>
+                                <td>{{rec['FWY_%'][0]}}</td>
+                                <td>{{rec['SG_P'][0]}}</td>
+                                <td>{{rec['SG_OTT'][0]}}</td>
+                                <td>{{rec['SG_APR'][0]}}</td>
+                                <td>{{rec['SG_ARG'][0]}}</td>
+                                <td>{{rec['GIR_Fairway_%'][0]}}</td>
+                                <td>{{rec['GIR_NotFairway_%'][0]}}</td>
+                                <td>{{rec['Sand_Save_Pct'][0]}}</td>                                                                  
                              </tr>
                                {% endfor %}
                        </table>
