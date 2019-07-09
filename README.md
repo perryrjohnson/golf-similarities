@@ -6,7 +6,9 @@ I would argue that this doesn’t paint the full picture on how to measure simil
 
 *“Who has similar putting, driving, and ball-striking statistics to Jordan Spieth this season?”*
 
-To answer this question, I gathered a bunch of PGA Tour data and built a little [web-app](https://golf-similarities.herokuapp.com) that finds similar players based on the major statistical categories amongst PGA Tour players for the 2019 season. The web-app can be found here.
+To answer this question, I gathered a bunch of PGA Tour data and built a little [web-app](https://golf-similarities.herokuapp.com) that finds similar players based on the major statistical categories amongst PGA Tour players for the 2019 season. The web-app can be found [here](https://golf-similarities.herokuapp.com).
+
+<img src="similarities.png" height="400">
 
 
 Comments or Questions? Please email me at: perryrjohnson7@gmail.com
